@@ -1,0 +1,72 @@
+input[type="file"] {
+    display: none;
+  }
+  
+  ::ng-deep {
+    .mat-form-field {
+      padding: 5px;
+      width: 75%;
+    
+    }
+  
+    .mat-form-field-label {
+      /*change color of label*/
+      color: #d34641 !important;
+      font-family: "lemonMilk", "rexlia", "coluna", sans-serif !important;
+    }
+  
+    .mat-focused .mat-form-field-label {
+      /*change color of label*/
+      color: #da433d !important;
+      font-family: "lemonMilk", "rexlia", "coluna", sans-serif !important;
+    }
+  
+    .mat-form-field-underline {
+      /*change color of underline*/
+      background-color: #da8481 !important;
+    }
+  
+    .mat-form-field-ripple {
+      /*change color of underline when focused*/
+      background-color: #da8481 !important;
+    }
+  
+    .mat-error {
+      /*change color of underline when focused*/
+      color: #a84343 !important;
+      font-style: italic;
+      font-size: 16px;
+      font-family: "roboto", sans-serif !important;
+    }
+  
+    .mat-form-field-flex {
+      background-color: #fff !important;
+    }
+  
+    .mat-icon {
+      cursor: pointer !important;
+    }
+  
+    .mat-dialog-container {
+      height: 100vh !important;
+      overflow: auto !important;
+    }
+  
+    .cdk-overlay-pane {
+      width: 50% ;
+    }
+    @media (max-width:500px) {
+      .cdk-overlay-pane{
+        width: 80%;
+      }
+      
+    }
+  }
+  form {
+    background-color: #bcc0bc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,38 @@
+<div class="form d-flex justify-content-beteween">
+     <h2 class="mx-auto">
+         {{argonaute !=undefined ? 'Modifier' : 'Créer'}} un argonaute
+     </h2>
+         <button type="button" class="btn-close" mat-dialog-close></button>
+</div>
+
+<form class="container mx-auto"
+        [formGroup]="argonauteForm"
+        (ngSubmit)="argonauteForm.valid && onSubmitForm()">
+       <mat-form-field class="mb-3" appearance="fill">
+           <mat-label name="name">  Name</mat-label>
+           <input name="name" matInput formControlName="name" />
+          
+        </mat-form-field>
+
+       <div class="text-center">
+        <button
+          class="btn btn-success mb-2"
+          type="submit"
+          (click)="onSubmitForm()"
+          [disabled]="argonauteForm.invalid"
+          mat-dialog-close
+        >
+          {{argonaute != undefined ? 'Modifier' : 'Créer' }}
+        </button>
+      </div>
+</form>
+
+
+
+
+
+
+
+
+
+

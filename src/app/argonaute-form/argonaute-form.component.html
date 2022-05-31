@@ -1,0 +1,41 @@
+<div class="main">
+    <h1>Gestion</h1>
+      <div class="table-animals">
+          <table class="table-success">
+              <thead>
+                  <tr class="table-success text-center">
+                   <td class="table-success"> #</td>
+                   <td class="table-success">Nom</td>
+                   <td class="table-success text-center">Action</td>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let argonaute of argonautes" class="table-success">
+                <td class="table-success text-center" width="10%"> {{argonaute.id}}</td>
+                <td class="table-success text-center" width="30%"> {{argonaute.name.length > 10 ? (argonaute.name | slice: 0:10)+'...' : argonaute.name}}</td>
+                <td class="table-success"> <img src="/Argonaute/src/app/shared/img/resize-king.png" alt="photo argonaute" width="100%"> </td>
+                <td class="table-success text-center" width="10%"> 
+                    <button
+                    class="mx-2 "
+                    mat-mini-fab
+                    color="basic"
+                    style="margin: 0 2px"
+                    (click)="openUpdateForm(argonaute.id)"
+                  >
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button class="mx-2" mat-mini-fab color="warn" style="margin: 3px 2px">
+                    <mat-icon (click)="deleteArgonaute(argonaute.id)">delete</mat-icon>
+                  </button></td>
+                </tr>
+                <tr class="table-success">
+                    <td class="table-success text-center" colspan="6"> 
+                      <button mat-mini-fab color="basic" (click)="openCreatedForm()">
+                        <mat-icon>add</mat-icon>
+                      </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
